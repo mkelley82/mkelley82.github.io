@@ -1,0 +1,192 @@
+@charset 'UTF-8';
+/* Some preferred fonts from Google WebFonts (http://code.google.com/webfonts) ...
+font-family: 'Noto Sans', sans-serif;
+font-family: 'Droid Sans', sans-serif;
+font-family: 'Ropa Sans', sans-serif;
+font-family: 'Arimo', sans-serif;
+font-family: 'Ubuntu Condensed', sans-serif;
+font-family: 'Inconsolata', sans-serif;
+font-family: 'Oxygen', sans-serif;
+font-family: 'Chivo', sans-serif;
+font-family: 'Merriweather Sans', sans-serif;
+*/
+
+/* Elements */
+body{
+    font-family: 'Chivo', sans-serif;
+}
+
+section p{
+    font-size: 14px;
+}
+/* End Element Styling */
+
+/* Class Selectors */
+.header{
+    color: #fff;
+    background-color: #000;
+    background-position: left bottom;
+    background-repeat: repeat-x;
+    background-image: url('../img/larger_border.png');
+    overflow: visible; /* Allow #portrait image to overlap bottom border of our .header div */
+}
+
+.header h3{
+    color: #fff;
+}
+/* End Class Selector Styling */
+
+/* Identifiers */
+#portrait{
+    width: 50%;
+    height: 50%;
+    position: relative;
+    top: 67px;
+    /* Combines with #skill-list's margin-top to provide a comfortable space between portrait and skill's list */
+    margin-bottom: 1.5em;
+    /* Apply "fade_n_spin" keyframes animation to #portrait w/ duration of 7s (repeating only 1x)
+    allowing time for the page to load and the effect of the fade-in to be noticed. */
+    -webkit-animation: fade_n_spin 7s 1;
+    -moz-animation: fade_n_spin 7s 1;
+    -ms-animation: fade_n_spin 7s 1;
+    -o-animation: fade_n_spin 7s 1;
+    animation: fade_n_spin 7s 1;
+}
+#skill-list{
+    margin-top: 65px;
+    position: fixed;
+    -ms-word-break: break-all;
+     word-break: break-all;
+
+     /* Non standard for webkit */
+     *word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+    -ms-hyphens: auto;
+        hyphens: auto;
+    /* Combines w/ #portrait's margin-bottom to create space between #portrait and skill's list */
+}
+
+#skills {
+    -ms-word-break: break-all;
+     word-break: break-all;
+
+     /* Non standard for webkit */
+     *word-break: break-word;
+
+-webkit-hyphens: auto;
+   -moz-hyphens: auto;
+    -ms-hyphens: auto;
+        hyphens: auto;
+}
+#main{
+    margin-top: 134px;
+    /* We need to push down the #main div below our fixed/sticky <header> div */
+}
+#copyright{
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+    font-weight: 700;
+    font-size: smaller;
+}
+
+/* End Identifier Styling */
+
+/* CSS3 @Keyframes Animations for #portrait
+- Fades in #portrait image from opacity of .0 to 1,
+- while #portrait "fades in", it is also being rotated a full 360deg.
+- includes cross-browser prefixes
+*/
+@keyframes "fade_n_spin" {
+ from {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+ }
+ to {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: alpha(opacity=100);
+    opacity: 1;
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
+ }
+
+}
+
+@-moz-keyframes fade_n_spin {
+ from {
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -moz-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   filter: alpha(opacity=100);
+   opacity: 1;
+   -moz-transform: rotate(360deg);
+   transform: rotate(360deg);
+ }
+
+}
+
+@-webkit-keyframes "fade_n_spin" {
+ from {
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -webkit-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   filter: alpha(opacity=100);
+   opacity: 1;
+   -webkit-transform: rotate(360deg);
+   transform: rotate(360deg);
+ }
+
+}
+
+@-ms-keyframes "fade_n_spin" {
+ from {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -ms-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+   filter: alpha(opacity=100);
+   opacity: 1;
+   -ms-transform: rotate(360deg);
+   transform: rotate(360deg);
+ }
+
+}
+
+@-o-keyframes "fade_n_spin" {
+ from {
+   filter: alpha(opacity=0);
+   opacity: 0;
+   -o-transform: rotate(0deg);
+   transform: rotate(0deg);
+ }
+ to {
+   filter: alpha(opacity=100);
+   opacity: 1;
+   -o-transform: rotate(360deg);
+   transform: rotate(360deg);
+ }
+
+}
+
+/* End @Keyframes Animation */
+/* EOF */

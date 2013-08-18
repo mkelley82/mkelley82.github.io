@@ -34,6 +34,10 @@ section p{
 .header h3{
     color: #fff;
 }
+
+  /* Styles */
+  .left-align { float: left;}
+
 /* End Class Selector Styling */
 
 /* Identifiers */

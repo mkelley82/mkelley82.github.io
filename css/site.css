@@ -56,9 +56,12 @@ section p{
     -o-animation: fade_n_spin 7s 1;
     animation: fade_n_spin 7s 1;
 }
+
+
 #skill-list{
     margin-top: 65px;
     position: fixed;
+    clear: both;
     -ms-word-break: break-all;
      word-break: break-all;
 
@@ -70,6 +73,11 @@ section p{
     -ms-hyphens: auto;
         hyphens: auto;
     /* Combines w/ #portrait's margin-bottom to create space between #portrait and skill's list */
+}
+
+#resume_dl {
+  clear: both;
+  position: fixed;
 }
 
 #skills {

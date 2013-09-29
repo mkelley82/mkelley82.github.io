@@ -60,7 +60,7 @@ section p{
 
 #skill-list{
     margin-top: 65px;
-    position: fixed;
+    /*position: fixed;*/
     clear: both;
     -ms-word-break: break-all;
      word-break: break-all;
